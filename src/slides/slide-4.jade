@@ -1,16 +1,26 @@
 section.bg-gammatones
   section
-    h4 3. Sparse Time-Relative coding
-    h5 Codificação esparsa relativa ao tempo
-    ul(style="font-size:0.70em")
-      li
-        h5 Modelo para representação de sinais
-        img(src='img/eq-signal-representation2.png', style="width:80%;height:80%")
+    h4 3. Sparse Time-Relative Coding
+    hr
+    h5 3.1. Modelo para representação de sinais
+    img(src='img/eq-signal-representation2.png', style="width:80%;height:80%")
     pre
       code
         | var linearMultHash = function(n, HASH_TABLE_SIZE) {
         |   var A = 0.642384983213213;
+        |   // podemos tentar colocar em código aqui...ver se vale.
         |   var value = n * A;
-        |   value = value * (int)value;
         |   return value * HASH_TABLE_SIZE;
         |}
+  section
+    h4 3. Sparse Time-Relative Coding
+    hr
+    h5 3.2. Escolha do algoritmo de codificação
+    p(style="align:center") Determinar o posicionamento e dimensionamento dos kernels
+    ul
+      li Processo não-linear
+      li Representação ótima usando dicionários genéricos é NP-Hard
+      li Iterações em 3 passos
+        ul
+          li <em>cross-relation (?)</em> entre sinal e os kernels
+
