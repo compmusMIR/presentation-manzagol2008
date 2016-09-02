@@ -1,0 +1,60 @@
+Novas representações de sinais de áudio que são esparsas na linha do tempo.
+Essas representações são eficientes e conseguem evitar a troca entre tempo e frequência (? o que significaria isso?)
+Alguns trabalhos sobre streams foram conduzidos e esses features continuam pouco usados na comunidade
+O artigo explora o uso dessas features para sinais musicais em música comercial
+
+
+Ele diz que a maioria dos features são baseados na análise de Fourier, que tem duas fraquezas.
+A primeira é a compensação de precisão entre tempo e frequência. A segunda tem a ver com o alinhamento dos blocos com os eventos musicais
+(não entendi a segunda)
+
+Sparse Coding assume que um sinal pode ser representado em um determinado ponto no tempo por um
+número bem menor de funções de base extraídas de um dicionário
+
+cada spike representa a posição de um'kernel (núcleo) no ponto preciso no tempo, com um coeficiente de escala ajustado para ele
+diz que representa o áudio de maneira bem eficiente com resolução arbitrária em ambos os eixos (freq/tempo)
+
+a idéia de sparse coding é derivar um dicionário de spectros de potência a partir de um corpus de audio
+assume-se que os spectros do sinal são uma soma pesada dos elementos do dicionário.
+esses pesos podem ser derivados de várias formas, cada trabalho usa um diferente.
+
+Esses kernels podem ser pré-definidos ou mesmo aprendidos.
+[13] usa Gammatones, que se aproximam de filtros cocleares.
+The model is the same as Smith and Lewicki’s [13] and is used in conjunction with the matching pursuit encoding, as done in [13, 14]
+
+3.1 - Formula de representação do sinal a partir dos kernels (qtde variável) colocados de forma precisa nas posições tau
+		--> Ver com o Thilo se ele entende bem a fórmula
+3.2 - Encontrar a representação ótima a partir de um dicionário genérico é NP-hard
+	- Usaram 'matching pursuit', um algoritmo guloso que chega em uma solução boa, embora não seja a ótima
+		Esse algoritmo funciona em 3 passos:
+			- faz-se uma relação cruzada entre o sinal e os kernels (elementos do dicionário)
+			- "best fitting projection (??)" é selecionada e o kernel correspondente selecionado,
+			registrando-se a identidade, a posição e a 'escala' (scaling).
+			- a projeção é então subtraída do sinal e o procedimento é repetido sobre o residual (figura 5)
+
+
+4 - Codificação usando os núcleos de gammatones
+	- baseado nos modelos cocleares
+	- os gammatones são selecionados de acordo com o [? equivalent rectangulra band (ERB) filter bank cochlear model?]
+		usa o auditory toolbok para matlab de Stanleyy [12], também usado em [13]
+
+
+	Uma vez inserido os spikes baseados nos kernels (núcleos) presentes no dicionário, eles percebem que dependendo do
+	sinal musical representando pelo spikegram, verifica-se diferentes quantidades de spikes utilizados, e eles estudam
+	o comportamento dessa diferença de acordo com os generos. Pra isso, usam o dataset do Tzanetakis
+		tem 1000 músicas de 10 generos, em pedaços de 30 segundos. cada música tem apenas um genero anotado.
+
+	A quantidade de spikes computadas é limitada a 10^5 spikes.
+	Considerando que a dificuldade de representação está nas frequencias altas, eles dividem os 64 kernels usados em 8 partes (bins)
+		e contam-os separadamente
+
+	Eles também verificam o efeito
+
+5 - Reconhecimento de gênero
+	Eles então aplicam os dados colhidos para reconhecimento de gênero
+
+========
+
+Manzagol
+	-> pedir o dicionário de gammatones utilizados, se ele tiver
+	-> alguma cópia de um audio utilizado e o respectivo  sinal remanescente após a extração de cada elemento
