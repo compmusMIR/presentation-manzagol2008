@@ -1,0 +1,16 @@
+section.bg-gammatones
+  section
+    h4 3. Sparse Time-Relative coding
+    h5 Codificação esparsa relativa ao tempo
+    ul(style="font-size:0.70em")
+      li
+        h5 Modelo para representação de sinais
+        img(src='img/eq-signal-representation2.png', style="width:80%;height:80%")
+    pre
+      code
+        | var linearMultHash = function(n, HASH_TABLE_SIZE) {
+        |   var A = 0.642384983213213;
+        |   var value = n * A;
+        |   value = value * (int)value;
+        |   return value * HASH_TABLE_SIZE;
+        |}

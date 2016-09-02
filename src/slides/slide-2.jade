@@ -1,5 +1,32 @@
-section
-	section
-		img(src='img/first-spikegram.png')
-	section
-		img(src='img/first-spikegram-closer.png')
+section.bg-invert
+  section
+    h3 1. Introdução e motivação
+    ul
+      li Novas representações de sinais de áudio que são esparsas na linha do tempo
+      li Essas representações são eficientes e conseguem evitar o <em>trade-off</em> entre tempo e frequência
+      li Alguns trabalhos sobre streams foram conduzidos e esses features continuam pouco usados na comunidade
+  section
+    h4 Sparse coding
+    ul
+      li Assume que um sinal pode ser representado em um determinado ponto no tempo por uma quantidade relativamente pequena de <em>basis functions</em> adquiridas a partir de um dicionário <em>overcomplete</em>.
+  section
+    h4 Spikegram
+    ul
+      li O <em>spikegram</em> é composto por um conjunto de <em>spikes</em>, que correspondem ao posicionamento de <em>basis functions</em> em um ponto preciso no tempo e ajustado por um      coeficiente de escala.
+  section
+    h4 Spikegram
+    img(src='img/first-spikegram.png', style="width:80%;height:80%")
+
+  section
+    div.col-left(style="font-size:0.60em")
+      ul
+        li x - tempo (mesma resolução do sinal)
+        li y - frequências dos <em>n</em> kernels utilizados
+        li spikes - a posição precisa de inserção de um kernel
+    div.col-right
+      img(src='img/first-spikegram-closer.png')
+    div(style="clear:both")
+
+  section
+    h4 Exemplo de um Gammatone
+    img(src='img/gammatone.png', style="width:80%;height:80%")
