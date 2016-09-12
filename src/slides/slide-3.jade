@@ -1,8 +1,33 @@
 section.bg-blackboard
   h3.fixed Trabalhos relacionados
   section
-    h6 Plumbley, Abdallah, Blumensath, Davies: <em>Sparse Representations of Polyphonic Music</em>
+    h4 Plumbley, Abdallah, Blumensath, Davies:<br/><em>Sparse Representations of Polyphonic Music</em> (2006)
     ul
         li.fragment Derivar um dicionário de espectros de energia de um corpus de audio
-        li.fragment Sintetizar superposicionar espectros de um dicionário (<em>code book</em>)
-        li.fragment Sem fases
+        li.fragment Sintetizar superposicionando espectros de um dicionário (<em>code book</em>) aproxidamente (sem fases)
+        li.fragment Métodos: Non-negative factorization, variance estimation
+        li.fragment Rápido mas incerteza tempo-frequência
+    
+  section
+    h4 Gardner e Magnasco:<br/><em>Sparse time-frequency representations</em> (2006)
+    div.col-left(style="font-size:0.70em")
+        ul
+            li.fragment Representações tempo-frequência reatribuída
+            li.fragment Rastreamento de sinais simples e isolados 
+            li.fragment Transformação: (w,t) -> (w_inst, t_inst)
+            li.fragment Precisão de t_inst inlimitada
+            li.fragment Classe de reatribuição complexa
+    div.col-right
+      img(src='img/trans_w-t_wins-tins.png')
+    div(style="clear:both")
+
+  section
+    h4 Smith, Lewicki: <em>Efficient Coding of Time-Realative Structure Using Spikes</em> (2005)
+    ul
+        li.fragment Sobreposição linear de kernels dislocável no tempo
+        li.fragment Algoritmos usados: 
+        ul
+            li.fragment Limiar de filtro (<em>Filter Threshold</em>)
+            li.fragment Busca de correspondências (<em>Matching Pursuit</em>)
+            li.fragment Otimização MAP (<em>MAP Optimization</em>)
+    
