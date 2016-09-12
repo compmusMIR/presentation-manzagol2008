@@ -4,24 +4,32 @@ section.bg-gammatones
     img(src='img/gammatone_encoding.png', style="width:80%;height:80%")
   section
     img(src='img/spikes_both.png', style="width:118%;height:118%")
-    ul(style='font-size:0.6em')
-      li Jazz examples
-        p
-          audio(controls)
-            source(src="img/jazz01.mp3", type="audio/mpeg")
-          audio(controls)
-            source(src="img/jazz02.mp3", type="audio/mpeg")
-      li Heavy Metal examples
-        p
-          audio(controls)
-            source(src="img/metal01.mp3", type="audio/mpeg")
-          audio(controls)
-            source(src="img/metal02.mp3", type="audio/mpeg")
+    h5  Exemplos
+    div.col-left
+      p Jazz
+      audio(controls)
+        source(src="img/jazz01.mp3", type="audio/mpeg")
+      audio(controls)
+        source(src="img/jazz02.mp3", type="audio/mpeg")
+    div.col-right
+      p Heavy Metal
+      audio(controls)
+        source(src="img/metal01.mp3", type="audio/mpeg")
+      audio(controls)
+        source(src="img/metal02.mp3", type="audio/mpeg")
+
   section
-    ul(style='font-size:0.6em')
-      li Sinal reconstruído
-        audio(controls)
+    img(src='img/spikes_both.png', style="width:118%;height:118%")
+    h5  Sinal reconstruído / sinal residual
+    div.col-left
+      p Jazz
+      audio(controls)
         source(src="img/jazz01_reconstructed.mp3", type="audio/mpeg")
-      li Sinal residual
-        audio(controls)
+      audio(controls)
+        source(src="img/jazz01_residual.mp3", type="audio/mpeg")
+    div.col-right
+      p Heavy Metal
+      audio(controls)
+        source(src="img/jazz01_residual.mp3", type="audio/mpeg")
+      audio(controls)
         source(src="img/jazz01_residual.mp3", type="audio/mpeg")
