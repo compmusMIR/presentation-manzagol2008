@@ -28,5 +28,13 @@ section.bg-invert
     div(style="clear:both")
 
   section
-    h4 Exemplo de um Gammatone
-    img(src='img/gammatone.png', style="width:80%;height:80%")
+    h4 Gammatone
+    div.col-left(style="font-size:0.60em")
+        li g(t) = t^n * e^(-t)
+        li introduzido como elemento básico da escuta 
+        li coclea funciona como banco de filtros com resposta impulsiva g(t)
+        li faixas de frequências crescende (faixas retangulares equivalentes - ERB)
+        li spikes correspondem a ativação (<em>firing</em>) células ciliadas
+    div.col-right
+        img(src='img/gammatone.png', style="width:80%;height:80%")
+
