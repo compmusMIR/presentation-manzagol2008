@@ -4,9 +4,9 @@ section.bg-blackboard
     h4 Plumbley, Abdallah, Blumensath, Davies:<br/><em>Sparse Representations of Polyphonic Music</em> (2006)
     ul
         li.fragment Derivar um dicionário de espectros de energia de um corpus de audio
-        li.fragment Sintetizar superposicionando espectros de um dicionário (<em>code book</em>) aproxidamente (sem fases)
-        li.fragment Métodos: Non-negative factorization, variance estimation
-        li.fragment Rápido mas incerteza tempo-frequência
+        li.fragment Sintetizar superposicionando espectros de um dicionário (<em>code book</em>) aproximadamente (sem fases)
+        li.fragment Métodos: Factorização não-negativa, estimação de variança
+        li.fragment Rápido, mas incerteza tempo-frequência
 
   section
     h4 Gardner e Magnasco:<br/><em>Sparse time-frequency representations</em> (2006)
@@ -14,11 +14,12 @@ section.bg-blackboard
         ul
             li.fragment Representações tempo-frequência reatribuída
             li.fragment Rastreamento de sinais simples e isolados
-            li.fragment Transformação: $$(\omega,t) \rightarrow (\omega_{inst}, t_{inst})$$
-            li.fragment Precisão de $t_{inst}$ ilimitada
+            li.fragment Transformação: $T_{\{x\}}:~(\omega,~t)~ \rightarrow~ (\omega_{inst},~t_{inst})$
+            li.fragment Precisão de $~t_{inst}~$ ilimitada
+            li.fragment Resolução de $~\omega_{inst}~$ ótima (Incerteza Fourier)
             li.fragment Classe de reatribuição complexa
     div.col-right
-      img(src='img/trans_w-t_wins-tins.png')
+      img.fragment(src='img/trans_w-t_wins-tins.png')
     div(style="clear:both")
 
   section
