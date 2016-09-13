@@ -12,16 +12,16 @@ section.bg-invert
   section
     h4 Spikegram
     ul
-      li O <em>spikegram</em> é composto por um conjunto de <em>spikes</em>, que correspondem ao posicionamento dos kernels em um ponto preciso no tempo e ajustado por um      coeficiente de escala.
+      li O <em>spikegram</em> é composto por um conjunto de <em>spikes</em>, que correspondem ao posicionamento dos kernels em um ponto preciso no tempo e ajustado por um coeficiente de escala.
   section
     h4 Spikegram
     img(src='img/first-spikegram.png', style="width:80%;height:80%")
 
   section
-    div.col-left(style="font-size:0.60em")
+    div(class="col-left uls")
       ul
-        li x - tempo (mesma resolução do sinal)
-        li y - frequências dos <em>n</em> kernels utilizados
+        li x : tempo (mesma resolução do sinal)
+        li y : frequências dos <em>n</em> kernels utilizados
         li spikes - a posição precisa de inserção de um kernel
     div.col-right
       img(src='img/first-spikegram-closer.png')
@@ -29,7 +29,7 @@ section.bg-invert
 
   section
     h4 Gammatone
-    div.col-left(style="font-size:0.60em")
+    div(class="col-left uls")
         li $g(t)\ =\ t^n\enspace e^{-t}\enspace \sin(\omega t + \phi)$
         li introduzido como elemento básico da escuta
         li cóclea funciona como banco de filtros com resposta impulsiva $g(t)$
