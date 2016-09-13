@@ -5,7 +5,7 @@ section.bg-blackboard
     ul
         li.fragment Derivar um dicionário de espectros de energia de um corpus de audio
         li.fragment Sintetizar sobreposicionando os espectros de um dicionário (<em>code book</em>) aproximadamente (sem fases)
-        li.fragment Métodos: Fatorização não-negativa, estimação de variância
+        li.fragment Métodos: fatorização não-negativa, estimação de variância
         li.fragment Rápido, mas com  incerteza tempo-frequência
 
   section
@@ -20,11 +20,12 @@ section.bg-blackboard
     div.uls(style="font-size:0.70em;width:600px")
         ul
             li.fragment Representações tempo-frequência reatribuída
-            li.fragment Rastreamento de sinais simples e isolados
+            li.fragment Rastreamento de sinais simples e isolados imitando comportamento do ouvido (cóclea, celulas ciliares)
             li.fragment Transformação: $T_{\{x\}}:~(\omega,~t)~ \rightarrow~ (\omega_{inst},~t_{inst})$
             li.fragment Precisão de $~t_{inst}~$ ilimitada
             li.fragment Resolução de $~\omega_{inst}~$ ótima (Incerteza Fourier)
             li.fragment Classe de reatribuição complexa
+            li.fragment Análise variando resolução / largura de banda 
 
   section
     h4 Gardner e Magnasco:<br/><em>Sparse time-frequency representations</em> (2006)
